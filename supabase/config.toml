@@ -1,0 +1,2 @@
+[functions.sync-keno]
+verify_jwt = false
