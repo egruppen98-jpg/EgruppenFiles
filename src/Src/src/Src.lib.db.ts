@@ -36,9 +36,9 @@ export async function removeDraw(drawNbr: number): Promise<void> {
   if (error) throw new Error(error.message);
 }
 
-/** Calls the `sync-keno` edge function, which fetches BCLC and upserts. */
+/** Calls the `Sync-keno` edge function, which fetches BCLC and upserts. */
 export async function syncFromBclc(): Promise<SyncResult> {
-  const { data, error } = await supabase.functions.invoke("sync-keno", { method: "POST" });
+  const { data, error } = await supabase.functions.invoke("Sync-keno", { method: "POST" });
   if (error) {
     let detail = error.message;
     const ctx = (error as { context?: Response }).context;
